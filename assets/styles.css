@@ -1,6 +1,17 @@
-body, article, p, div {
+:root {
+    --background-color: hsla(282, 100%, 41%, 1);
+    --text-background:  hsla(102, 45%, 85%, 0.8);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Comfortaa', cursive;
     font-size: 18px;
+    line-height: 1.25;
+    background-color: var(--background-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -11,13 +22,18 @@ pre {
     font-family: 'Source Code Pro', monospace;
 }
 
+.content {
+    margin: 0.5em;
+    padding: 0.5rem;
+    background-color: var(--text-background);
+    border-radius: 6px;
+}
 
 .main-header {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-template-columns: 30% 70%;
-    grid-template-areas: "p t"
-                         "p s";
+    grid-template-areas: "p t";
     grid-column-gap: 0.5rem;
     height: 100px;
     width: 100%;
@@ -35,6 +51,10 @@ pre {
 .main-header h1 {
     grid-area: t;
     font-size: 2.25rem;
+    text-shadow: 2px 2px 24px var(--text-background),
+                 2px -2px 24px var(--text-background),
+                 -2px 2px 24px var(--text-background),
+                 -2px -2px 24px var(--text-background);
 }
 
 .main-header .subtitle {
@@ -48,6 +68,7 @@ pre {
     height: 100%;
     overflow: hidden;
     grid-area: p;
+    border-radius: 12px;
 }
 
 .main-header img {
