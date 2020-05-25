@@ -15,3 +15,7 @@ Including a preformatted block for testing purposes.
     import ppb
     
     ppb.run()
+
+PursuedPyBear, also known as ppb, exists to be an educational resource. Most
+obviously used to teach computer science, it can be a useful tool for any topic
+that a simulation can be helpful.

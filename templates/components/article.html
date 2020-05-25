@@ -1,6 +1,6 @@
 <article class="{% if class %}{{ class }}{% else %}post{% endif %}" id="{{ article.slug }}">
   <h2>{{ article.title }}</h2>
-  <div class="content">
+  <div class="article-content">
       {{ article.content | safe }}
   </div>
 </article>
