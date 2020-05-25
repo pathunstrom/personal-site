@@ -92,6 +92,25 @@ pre {
     top: -15%;
 }
 
+.main-nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-nav li {
+    background-color: var(--text-background);
+    width: 6em;
+    height: 3em;
+    padding-top: .9em;
+    text-align: center;
+}
+
+.main-nav a {
+    text-decoration: None;
+    color: black;
+    font-weight: bold;
+}
+
 @media screen and (min-width: 380px) {
     .main-header img {
         top: -40%;
