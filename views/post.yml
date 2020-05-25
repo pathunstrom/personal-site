@@ -2,4 +2,4 @@ path:
   template: /blog/{{ post.published|date("%Y/%m/%d") }}/{{ post.slug }}
   for-each:
     post: session.query(Post).filter(Post.published != None).all()
-template: post
+template: pages/post

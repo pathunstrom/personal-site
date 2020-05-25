@@ -1,5 +1,7 @@
 path: /blog
-template: blog
+template: pages/blog
 context:
+  static:
+    page-title: Blog
   dynamic:
     posts: session.query(Post).filter(Post.published != None).order_by(Post.published.desc()).all()
