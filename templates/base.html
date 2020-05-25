@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    {% block title %}{{ site_title }}{% if page_title %} - {{ page_title }}{% endif %}{% endblock %}
+  </title>
+</head>
+<body>
+  {% block body %}{% endblock %}
+</body>
+</html>

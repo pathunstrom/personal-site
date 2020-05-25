@@ -1,0 +1,7 @@
+project-name: My personal homepage
+base-path: /
+context:
+  static:
+    site-title: Piper Thunstrom
+  dynamic:
+    all-authors: session.query(Author).all()
