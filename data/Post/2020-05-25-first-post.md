@@ -9,3 +9,9 @@ published: 2020-05-25
 This is a basic post to make sure my new website builds as expected.
 
 You can safely ignore that this post exists.
+
+Including a preformatted block for testing purposes.
+
+    import ppb
+    
+    ppb.run()

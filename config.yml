@@ -1,5 +1,8 @@
 project-name: My personal homepage
 base-path: /
+assets:
+  source: assets
+  dest: static
 context:
   static:
     site-title: Piper Thunstrom
