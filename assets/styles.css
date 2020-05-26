@@ -79,6 +79,7 @@ pre {
     grid-area: p;
     border-radius: 12px;
     position: relative; /* Apparently mobile safari doesn't like overflow without this? */
+    z-index: -5;
 }
 
 .main-header img {
