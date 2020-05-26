@@ -30,6 +30,7 @@ pre {
 .body-content {
     margin: 0.5em;
     padding: 0.5rem;
+    padding-top: 1rem;
     background-color: var(--text-background);
     border-radius: 6px;
 }
@@ -181,5 +182,29 @@ pre {
 
     .main-nav li {
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .main-header .image-limit {
+        height: auto;
+        max-height: initial;
+    }
+
+    .main-nav {
+        top: .5em;
+        left: 66%;
+        max-width: 30%;
+    }
+
+    .main-nav ul {
+        flex-direction: row;
+        height: 125px;
+        padding-top: 30px;
+        justify-content: space-around;
+    }
+
+    .main-nav li {
+        width: 6em;
     }
 }
