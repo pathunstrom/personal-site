@@ -131,3 +131,55 @@ pre {
         top: -50%;
     }
 }
+
+@media screen and (min-width: 725px) {
+    .main-header {
+        display: initial;
+        height: 125px;
+    }
+
+    .main-header .image-limit {
+        max-width: 27%;
+        max-height: 275px;
+        position: absolute;
+        top: 1em;
+        left: .5em;
+    }
+
+    .main-header img {
+        position: initial;
+    }
+
+    .main-header h1,.subtitle {
+        position: relative;
+        left: 30%;
+        max-width: 67%;
+        height: 60px;
+    }
+
+    .body-content {
+        position: absolute;
+        left: 29%;
+        top: 135px;
+        width: 67%;
+        height: auto;
+    }
+
+    .main-nav {
+        width: 27%;
+        position: absolute;
+        left: 5px;
+        top: 300px;
+        padding: 0 1em;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        height: 150px;
+        align-content: stretch;
+    }
+
+    .main-nav li {
+        width: 100%;
+    }
+}
