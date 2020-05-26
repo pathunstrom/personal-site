@@ -1,7 +1,8 @@
 :root {
     --background-color: hsla(282, 100%, 41%, 1);
-    --text-background:  hsla(102, 45%, 85%, 0.8);
-    --code-background: hsla(282, 12%, 85%, 1);
+    --background-highlight: hsla(290, 100%, 41%, 1);
+    --text-background:  hsla(300, 65%, 85%, 1);
+    --code-background: hsla(300, 25%, 85%, 1);
 }
 
 * {
@@ -12,8 +13,12 @@ body {
     font-family: 'Comfortaa', cursive;
     font-size: 16px;
     line-height: 1.4;
-    background-color: var(--background-color);
     padding: 5px;
+    color: white;
+    background: #6a3093;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--background-color), var(--background-highlight));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--background-color), var(--background-highlight)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,6 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 
 pre {
     font-family: 'Source Code Pro', monospace;
+    color: black;
     padding: 1em;
     margin: 0.75em;
     background-color: var(--code-background);
@@ -29,10 +35,7 @@ pre {
 
 .body-content {
     margin: 0.5em;
-    padding: 0.5rem;
-    padding-top: 1rem;
-    background-color: var(--text-background);
-    border-radius: 6px;
+    padding: 1rem 0.5rem 0.5rem;
 }
 
 .body-content h1 {
@@ -60,27 +63,14 @@ pre {
 .main-header h1 {
     grid-area: t;
     font-size: 2.25rem;
-    text-shadow: 2px 2px 24px var(--text-background),
-                 2px -2px 24px var(--text-background),
-                 -2px 2px 24px var(--text-background),
-                 -2px -2px 24px var(--text-background);
 }
 
 .main-header .subtitle {
     display: none;
     grid-area: s;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    font-family: 'Bree Serif', serif;
 }
-/*
-.main-header .image-limit {
-    width: 100%;
-    height: 100%;
-    grid-area: p;
-    border-radius: 12px;
-    position: relative;
-    z-index: -5;
-}
-*/
 
 .main-header img {
     width: 100%;
@@ -96,18 +86,21 @@ pre {
 }
 
 .main-nav li {
-    background-color: var(--text-background);
     width: 6em;
     height: 3em;
-    padding-top: .9em;
-    text-align: center;
-    border-radius: 2px;
+    border: 2px solid var(--text-background);
+    border-radius: 5px;
 }
 
 .main-nav a {
+    display: inline-block;
     text-decoration: None;
     color: black;
     font-weight: bold;
+    height: 100%;
+    width: 100%;
+    padding-top: .9em;
+    text-align: center;
 }
 
 @media screen and (min-width: 425px) {
