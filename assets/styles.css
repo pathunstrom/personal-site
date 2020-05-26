@@ -73,11 +73,15 @@ pre {
 }
 
 .main-header img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
     grid-area: p;
     border-radius: 12px;
     z-index: -5;
+}
+
+.main-header .full-img {
+    display: none;
 }
 
 .main-nav ul {
@@ -114,10 +118,6 @@ pre {
     .main-header .subtitle {
         display: initial;
     }
-
-    .main-header img {
-        top: 0;
-    }
 }
 
 @media screen and (min-width: 560px) {
@@ -134,9 +134,18 @@ pre {
 
     .main-header img {
         max-width: 27vw;
+        height: auto;
         position: absolute;
         top: 1em;
         left: .5em;
+    }
+
+    .main-header .full-img {
+        display: initial;
+    }
+
+    .main-header .sqr-img {
+        display: none;
     }
 
     .main-header h1,.subtitle {
