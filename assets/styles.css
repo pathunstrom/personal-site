@@ -92,14 +92,14 @@ pre {
 .main-nav li {
     width: 6em;
     height: 3em;
-    border: 2px solid var(--text-background);
+    border: 1px solid var(--text-background);
     border-radius: 5px;
 }
 
 .main-nav a {
     display: inline-block;
     text-decoration: None;
-    color: black;
+    color: white;
     font-weight: bold;
     height: 100%;
     width: 100%;
@@ -137,7 +137,7 @@ pre {
         height: auto;
         position: absolute;
         top: 1em;
-        left: .5em;
+        left: 1em;
     }
 
     .main-header .full-img {
