@@ -39,7 +39,7 @@ pre {
 }
 
 .author-details {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5vh;
 }
 
 .author-details img {
@@ -53,7 +53,6 @@ pre {
 .author-details p {
     display: inline-block;
     font-size: 1.25rem;
-    padding-bottom: 2rem;
 }
 
 .post header img {
@@ -64,6 +63,9 @@ pre {
 
 .post footer {
     margin-top: 2rem;
+    padding: 2rem;
+    border: solid 1px var(--text-background);
+    border-radius: 10px;
 }
 
 .body-content {
