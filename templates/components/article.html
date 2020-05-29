@@ -7,6 +7,8 @@
     </div>
   </section>
   <footer>
-
+    {% with author = article.author %}
+      {% include "components/author.html" %}
+    {% endwith %}
   </footer>
 </article>

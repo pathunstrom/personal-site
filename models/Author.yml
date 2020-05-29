@@ -2,3 +2,4 @@ name: String
 short-name: String
 email: String
 avatar: String
+bio: Text

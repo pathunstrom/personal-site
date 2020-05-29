@@ -38,10 +38,32 @@ pre {
     background-color: var(--code-background);
 }
 
-.post img {
+.author-details {
+    margin-bottom: 2rem;
+}
+
+.author-details img {
+    display: inline-block;
+    max-width: 25%;
+    height: auto;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+.author-details p {
+    display: inline-block;
+    font-size: 1.25rem;
+    padding-bottom: 2rem;
+}
+
+.post header img {
     max-width: 100%;
     height: auto;
     border-radius: 3px;
+}
+
+.post footer {
+    margin-top: 2rem;
 }
 
 .body-content {
@@ -130,9 +152,13 @@ pre {
         display: initial;
     }
 
-    .post img {
+    .post header img {
         max-width: 80%;
         margin-left: 10%;
+    }
+
+    .author-details {
+        padding-left: 10vw;
     }
 }
 
@@ -225,7 +251,7 @@ pre {
         overflow: hidden;
     }
 
-    .post img {
+    .post header img {
         height: 100%;
         max-width: 80%;
         max-height: initial;
