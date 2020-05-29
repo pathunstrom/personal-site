@@ -1,6 +1,8 @@
 title: String
 slug: String
 author: Author
+header: String
+header-alt: String
 summary: String
 published: DateTime
 content: Content

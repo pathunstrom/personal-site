@@ -1,6 +1,8 @@
 ---
 title: My First Post
 slug: debug-post
+header: img/headers/code.png
+header-alt: A computer screen with CSS
 summary: This is a debug first post. Completely useless.
 author: piper
 published: 2020-05-25

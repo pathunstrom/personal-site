@@ -1,6 +1,12 @@
 <article class="{% if class %}{{ class }}{% else %}post{% endif %}" id="{{ article.slug }}">
-  <h1>{{ article.title }}</h1>
-  <div class="article-content">
-      {{ article.content | safe }}
-  </div>
+  <header class="image-container"><img src="{% asset post.header %}" width=1200 height=627 alt="{{ post.header_alt }}"></header>
+  <section>
+    <h1>{{ article.title }}</h1>
+    <div class="article-content">
+        {{ article.content | safe }}
+    </div>
+  </section>
+  <footer>
+
+  </footer>
 </article>

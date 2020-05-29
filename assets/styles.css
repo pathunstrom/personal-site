@@ -38,6 +38,12 @@ pre {
     background-color: var(--code-background);
 }
 
+.post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
 .body-content {
     margin: 0.5em;
     padding: 1rem 0.5rem 0.5rem;
@@ -123,6 +129,11 @@ pre {
     .main-header .subtitle {
         display: initial;
     }
+
+    .post img {
+        max-width: 80%;
+        margin-left: 10%;
+    }
 }
 
 @media screen and (min-width: 560px) {
@@ -204,5 +215,20 @@ pre {
 
     .main-nav li {
         width: 6em;
+    }
+
+    .post .image-container {
+        max-height: 20vh;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        overflow: hidden;
+    }
+
+    .post img {
+        height: 100%;
+        max-width: 80%;
+        max-height: initial;
+        margin: initial;
     }
 }
