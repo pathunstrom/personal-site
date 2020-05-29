@@ -1,2 +1,5 @@
 path: /
 template: pages/home
+context:
+  dynamic:
+    content: session.query(Body).get("home")

@@ -1,0 +1,5 @@
+name: String
+title: String
+url: String
+include_about: Boolean
+content: Content
