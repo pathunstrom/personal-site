@@ -1,0 +1,7 @@
+<section class="article-summary">
+  <a href="{% url view_name, article %}">
+    <img class="summary-header" src="{% asset article.header %}" width=1200 height=627 alt="{{ article.header_alt }}">
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.summary }}</p>
+  </a>
+</section>

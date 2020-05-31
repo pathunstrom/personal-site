@@ -39,6 +39,26 @@ pre {
     background-color: var(--code-background);
 }
 
+.article-summary {
+    max-width: 100%;
+    border-top: 2px solid var(--text-background);
+    padding: 1em;
+    margin-top: 1.5em;
+}
+
+.article-summary a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: normal;
+}
+
+.article-summary .summary-header {
+    max-width: 90%;
+    height: auto;
+    margin-left: 5%;
+    border-radius: 5px;
+}
+
 .author-details {
     margin-bottom: 1.5vh;
 }
@@ -54,19 +74,6 @@ pre {
 .author-details p {
     display: inline-block;
     font-size: 1.25rem;
-}
-
-.post header img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 3px;
-}
-
-.post footer {
-    margin-top: 2rem;
-    padding: 2rem;
-    border: solid 1px var(--text-background);
-    border-radius: 10px;
 }
 
 .body-content {
@@ -141,6 +148,19 @@ pre {
     width: 100%;
     padding-top: .9em;
     text-align: center;
+}
+
+.post header img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+.post footer {
+    margin-top: 2rem;
+    padding: 2rem;
+    border: solid 1px var(--text-background);
+    border-radius: 10px;
 }
 
 @media screen and (min-width: 425px) {
@@ -228,6 +248,17 @@ pre {
 }
 
 @media screen and (min-width: 1025px) {
+
+    .article-list {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .article-summary {
+        min-width: 250px;
+        max-width: 20vw;
+        margin: 0 2%;
+    }
 
     .main-nav {
         top: .5em;

@@ -2,9 +2,13 @@
 
 {% block body %}
   <p>These are my latest posts.</p>
-  <ul>
+  <ul class="article-list">
     {% for post in posts %}
-      <li><a href="{% url "post", post %}">{{ post.title }}</a></li>
+      <li>
+        {% with view_name = "post", article = post %}
+          {% include 'components/article-summary.html' with context %}
+        {% endwith %}
+      </li>
     {% endfor %}
   </ul>
 {% endblock %}
