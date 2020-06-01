@@ -251,13 +251,17 @@ pre {
 
     .article-list {
         display: flex;
-        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+    }
+
+    .article-list li {
+        flex-basis: 33%
     }
 
     .article-summary {
-        min-width: 250px;
-        max-width: 20vw;
-        margin: 0 2%;
+        margin: 1em;
     }
 
     .main-nav {

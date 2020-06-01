@@ -7,4 +7,4 @@ summary: How I tamed my HTML with Jinja includes and with blocks.
 author: piper
 ---
 
-This is a tesy
+This is a test
