@@ -1,8 +1,7 @@
 ---
 title: Combine pytest.parametrize with NamedTuples for wonderful tests.
 slug: pytest-named-tuples
-header: img/headers/code.png
-header-alt: A computer screen with CSS
+header: web-dev
 summary: I improved my test suite by combining NamedTuples with pytest.parametrize.
 author: piper
 ---

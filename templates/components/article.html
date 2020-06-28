@@ -1,5 +1,5 @@
 <article class="{% if class %}{{ class }}{% else %}post{% endif %}" id="{{ article.slug }}">
-  <header class="image-container"><img src="{% asset article.header %}" width=1200 height=627 alt="{{ article.header_alt }}"></header>
+  <header class="image-container"><img src="{% asset article.header.path %}" width=1200 height=627 alt="{{ article.header.alt }}"></header>
   <section>
     <h1>{{ article.title }}</h1>
     <div class="article-content">

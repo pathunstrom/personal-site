@@ -1,8 +1,7 @@
 ---
 title: Finding Yourself
 slug: finding-yourself
-header: img/headers/trans.png
-header-alt: "Chalk drawing: a female symbol in pink, a male symbol in blue, and a transgender symbol in blue and pink."
+header: trans-chalk
 summary: "A personal essay from a critical part of my past: all about finding myself."
 author: piper
 published: 2020-06-03

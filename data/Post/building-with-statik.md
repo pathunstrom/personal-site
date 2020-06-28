@@ -1,8 +1,7 @@
 ---
 title: Built With Statik
 slug: built-with-statik
-header: img/headers/code.png
-header-alt: A computer screen with CSS
+header: web-dev
 summary: This shiny new blog was built with statik. Here's the basics.
 author: piper
 ---

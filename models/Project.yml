@@ -1,7 +1,6 @@
 title: String
 summary: String
 link: String
-header: String
-header-alt: String
+header: Header
 published: DateTime
 content: Content
