@@ -57,6 +57,7 @@ pre {
     height: auto;
     margin-left: 5%;
     border-radius: 5px;
+    object-fit: cover;
 }
 
 .author-details {
@@ -152,8 +153,9 @@ pre {
 
 .post header img {
     max-width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 3px;
+    object-fit: cover;
 }
 
 .post footer {
@@ -304,10 +306,9 @@ pre {
         overflow: hidden;
     }
 
-    .post header img {
-        height: 100%;
+    .post .image-container img {
+        height: 20vh;
         max-width: 80%;
-        max-height: initial;
         margin: initial;
     }
 }
