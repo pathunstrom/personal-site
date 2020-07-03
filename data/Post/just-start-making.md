@@ -4,6 +4,7 @@ slug: games-literacy
 header: laser-hall
 summary: Stop waiting and just build your damn game.
 author: piper
+published: 2020-07-04
 ---
 
 Those who follow me know that I don't tend to describe myself as a game
@@ -59,7 +60,7 @@ Try video games, too. Again, even things you don't like.
 The important thing is that just like a writer needs to read broadly, a game
 developer or designer should experience a wide variety of games.
 
-## Study Games
+## Study
 
 Lastly, study the theory around games. There's fabulous books out there to help
 you with this: things like _The Rules of Play_ or _A Theory of Fun_ (both in my
@@ -69,6 +70,12 @@ communities of game designers where you can talk with other folks.
 Games have their own language and society de-emphasizes game literacy as a skill
 that is important. You'll want to counteract that de-emphasis in your own
 studies.
+
+Don't stop at games, though! Learn a craft, practice an art, try a new skill
+set, watch movies, read books, study visual design. All creative fields have a
+tendency to become insular, and games are no different. Instead of always
+draining your inspiration making new stuff, try learning or experiencing
+something new! That'll fill you up to try new things.
 
 If you've been designing that perfect game for a handful of years, it's time to
 put it aside and go make some other games. Come back with a fresh set of eyes
