@@ -29,6 +29,8 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Bree Serif', serif;
+    margin: 1.5rem 0 .75rem;
+    padding-left: .75rem;
 }
 
 pre {
@@ -84,11 +86,14 @@ pre {
 
 .body-content h1 {
     font-size: 1.5em;
-    margin-bottom: 0.5em;
+}
+
+.body-content h2 {
+    font-size: 1.5rem;
 }
 
 .body-content p {
-    margin-bottom: 0.5em;
+    margin-bottom: 1rem;
 }
 
 .main-header {
@@ -181,6 +186,10 @@ pre {
 }
 
 @media screen and (min-width: 425px) {
+    .body-content h1 {
+        font-size: 2rem;
+    }
+
     .main-header {
         grid-template-rows: 75px 50px;
         grid-template-areas: "p t"
@@ -245,6 +254,14 @@ pre {
         height: auto;
     }
 
+    .body-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .body-content h2 {
+        font-size: 2rem;
+    }
+
     .main-nav {
         width: 27%;
         position: absolute;
@@ -279,6 +296,14 @@ pre {
 
     .article-summary {
         margin: 1em;
+    }
+
+    .body-content h1 {
+        font-size: 3rem;
+    }
+
+    .body-content h2 {
+        font-size: 2.4rem;
     }
 
     .main-nav {
