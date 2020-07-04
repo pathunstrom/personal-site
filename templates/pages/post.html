@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block additional_styles %}
+  <link href="{% asset "styles/author.css" %}" type="text/css" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
   {% with article = post %}
     {% include "components/article.html" with context %}
