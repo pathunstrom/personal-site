@@ -1,7 +1,5 @@
 <div class="author">
-  <div class="author-details">
-    <img src="{% asset author.avatar %}" alt="Avatar for {{ author.name }}">
-    <p>{{ author.name }}</p>
-  </div>
-  <p class="about">{{ author.bio }}</p>
+  <img class="author__image" src="{% asset author.avatar %}" alt="Avatar for {{ author.name }}">
+  <p class="author__name">{{ author.name }}</p>
+  <p class="author__bio">{{ author.bio }}</p>
 </div>
