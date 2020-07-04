@@ -3,5 +3,6 @@ New home for my personal website.
 
 ## Building
 
-To build for local viewing via PyCharm, change config.yml base-path to
-`/personal-site/` then run `statik`.
+To build locally invoke:
+
+    statik -p dev-config.yml --clear-output
