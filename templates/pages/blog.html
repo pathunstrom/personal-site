@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block additional_styles %}
+  <link href="{% asset "styles/article-summary.css" %}" type="text/css" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
   <p>These are my latest posts.</p>
   <ul class="article-list">

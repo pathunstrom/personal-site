@@ -1,7 +1,7 @@
-<section class="article-summary">
-  <a href="{% url view_name, article %}">
+<a class="article-summary" href="{% url view_name, article %}">
+  <section class="article-summary">
     <img class="summary-header" src="{% asset article.header.path %}" width=1200 height=627 alt="{{ article.header.alt }}">
     <h1>{{ article.title }}</h1>
     <p>{{ article.summary }}</p>
-  </a>
-</section>
+  </section>
+</a>

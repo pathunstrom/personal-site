@@ -47,27 +47,6 @@ pre {
     overflow-x: auto;
 }
 
-.article-summary {
-    max-width: 100%;
-    border-top: 2px solid var(--text-background);
-    padding: 1em;
-    margin-top: 1.5em;
-}
-
-.article-summary a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: normal;
-}
-
-.article-summary .summary-header {
-    max-width: 90%;
-    height: auto;
-    margin-left: 5%;
-    border-radius: 5px;
-    object-fit: cover;
-}
-
 .body-content {
     margin: 0.5em;
     padding: 1rem 0.5rem 0.5rem;
@@ -245,10 +224,6 @@ pre {
 
     .article-list li {
         flex-basis: 33%
-    }
-
-    .article-summary {
-        margin: 1em;
     }
 
     .body-content h1 {
