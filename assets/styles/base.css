@@ -33,12 +33,18 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: .75rem;
 }
 
-pre {
+code {
     font-family: 'Source Code Pro', monospace;
     color: black;
+    background-color: var(--code-background);
+    padding: 0 0.1em;
+}
+
+pre {
     padding: 1em;
     margin: 0.75em;
     background-color: var(--code-background);
+    overflow-x: auto;
 }
 
 .article-summary {
