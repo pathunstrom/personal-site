@@ -4,25 +4,24 @@ slug: built-with-statik
 header: web-dev
 summary: This shiny new blog was built with statik. Here's the basics.
 author: piper
+published: 2020-08-01
 ---
 
-It's been a wild week. On Monday I decided to make a new website. I had already
-taken a look at statik as a possible tool for the job, and set out to try. Less
-than 48 hours I launched.
-
-It's not feature complete yet, but it's a really solid start.
+Now that it's been up for a while, I'd like to talk about the tool I used to
+build this site. It's another static site generator that is great for folks who
+like to DIY.
 
 ## Why _ANOTHER_ Static Site Generator
 
-When you get into my specialties as a developers, I get opinionated. No
-surprise, we all do. So it should come as no surprise that as a dev who got my
-start building static websites in HTML and CSS, I have opinions on how I work
-with them.
+When you get into my specialties as a developer, I get opinionated. No surprise,
+we all do. So it should come as no surprise that as a dev who got my start
+building static websites in HTML and CSS, I have opinions on how I work with
+them.
 
 Most static site generators are single purpose: Jekyll makes great pages and
 blogs, but building any other taxonomy is annoying. Lots of other ssgs have this
-problem, too. Sphinx is _great_ for docs, but I wouldn't want to build a web
-page with it.
+problem, too. Sphinx is _great_ for docs, but I wouldn't want to build a blog
+with it.
 
 This limitation was one I'm never happy with, because I almost always want to
 run multiple things off the same site.
@@ -82,9 +81,12 @@ errors from statik are often entirely opaque with not enough detail of what is
 being processed to debug effectively. I've dug into my installed version to add
 breakpoints to add that context.
 
-The other downside is the activity on the project. The last commit was back in
+Another downside is the activity on the project. The last commit was back in
 October, 2019. I'm not judging for the silence, but I'd love to see some work
 on the user friendliness of the project.
+
+Lastly, there's a lot of features missing you get out of the box in other
+generators, like atom or rss feeds.
 
 ## The Good Parts
 
