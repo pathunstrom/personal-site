@@ -8,3 +8,4 @@ context:
     site-title: Piper Thunstrom
   dynamic:
     all-authors: session.query(Author).all()
+    links: session.query(Link).order_by(Link.priority.desc()).all()
