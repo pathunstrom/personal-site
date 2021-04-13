@@ -1,5 +1,5 @@
 project-name: My personal homepage
-base-path: /personal-site/
+base-path: /personal-site/public/
 assets:
   source: assets
   dest: static
@@ -8,3 +8,4 @@ context:
     site-title: Piper Thunstrom
   dynamic:
     all-authors: session.query(Author).all()
+    links: session.query(Link).order_by(Link.priority.desc()).all()

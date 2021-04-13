@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Styles. -->
-  <link href="{% asset "styles/reset.css" %}" rel="stylesheet">
+  <link href="{% asset "styles/reset.css" %}" type="text/css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Comfortaa&family=Source+Code+Pro&display=swap" rel="stylesheet">
   <link href="{% asset "styles/base.css" %}" type="text/css" rel="stylesheet">
   {% block additional_styles %}
@@ -21,5 +21,12 @@
     {% block body %}{% endblock %}
   </div>
   {% include "components/main-nav.html" %}
+
+  <ul class="link-tree">
+      {% for link in links %}
+          <li>{%- include "components/icon-link.html" with context -%}</li>
+      {% endfor %}
+  </ul>
+
 </body>
 </html>
