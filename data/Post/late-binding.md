@@ -1,5 +1,5 @@
 ---
-title: Building Functions in a For Loop: Understanding Late Binding
+title: "Building Functions in a For Loop: Understanding Late Binding"
 slug: late-binding
 header: web-dev
 summary: Discussion has arisen regarding Python scopes in for loops, predicated on a bit of oddness due to late binding functions.
