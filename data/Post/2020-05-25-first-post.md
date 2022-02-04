@@ -16,6 +16,8 @@ Including a preformatted block for testing purposes.
     import ppb
     
     ppb.run()
+    
+    # This comment is intentionally very very very long to test what happens if a preformatted block overflows the website. Yup, it's innapropriately long.
 
 PursuedPyBear, also known as ppb, exists to be an educational resource. Most
 obviously used to teach computer science, it can be a useful tool for any topic
