@@ -48,6 +48,7 @@ code {
     background-color: var(--code-background);
     padding: 0 0.1em;
     overflow-x: auto;
+    max-width: 100%;
 }
 
 pre {
