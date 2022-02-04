@@ -55,6 +55,7 @@ pre {
     margin: 0.75em;
     background-color: var(--code-background);
     overflow-x: auto;
+    max-width: 100%;
 }
 
 .body-content {
