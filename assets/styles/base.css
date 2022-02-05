@@ -24,10 +24,10 @@ body {
                          "body body"
                          "nav nav"
                          "links links";
-    grid-template-columns: 15vh auto;
-    grid-template-rows: 15vh auto;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 20vh auto;
     grid-row-gap: .5em;
-    width: 100%;
+    max-width: 100%;
     padding: 1em;
 }
 
@@ -63,6 +63,7 @@ pre {
     width: 100%;
     grid-area: body;
     padding: 1em;
+    margin-top: 1rem;
 }
 
 .body-content h1 {
@@ -128,6 +129,7 @@ pre {
     grid-area: headshot;
     padding: .5em;
     width: 100%;
+
 }
 
 .headshot img {

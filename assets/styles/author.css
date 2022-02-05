@@ -1,7 +1,6 @@
 .author {
     display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 33% 66%;
     grid-gap: .5rem;
 }
 
@@ -29,7 +28,7 @@
 
 @media screen and (min-width: 1000px) {
     .author {
-        grid-template-columns: 20vh 1fr;
+        grid-template-columns: 20vh auto;
         grid-template-rows: 10vh 10vh;
     }
 
