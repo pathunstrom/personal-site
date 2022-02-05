@@ -11,7 +11,7 @@ Now that it's been up for a while, I'd like to talk about the tool I used to
 build this site. It's another static site generator that is great for folks who
 like to DIY.
 
-## Why _ANOTHER_ Static Site Generator
+### Why _ANOTHER_ Static Site Generator
 
 When you get into my specialties as a developer, I get opinionated. No surprise,
 we all do. So it should come as no surprise that as a dev who got my start
@@ -31,7 +31,7 @@ opinionated about their HTML. They have specific ideas about how you should go
 about laying out your templates, and how you invoke them. It's never sat well
 with me.
 
-## I Could Build My Own
+### I Could Build My Own
 
 It's a running joke that there's [as many static site generators as there are
 developers](https://twitter.com/cfactoid/status/1245424014669090817). I was
@@ -44,7 +44,7 @@ Models? Relationships? And you just point at a template in your view definition?
 
 This was promising.
 
-## 48 Hours Later
+### 48 Hours Later
 
 I went through the tutorial and got my first ugly version running inside an
 hour. From there, it was a matter of working out the various bits I knew I
@@ -74,7 +74,7 @@ websites.)
 This all happened over about 48 hours. It went incredibly fast, and it's been
 really nice to work on one or two features a day as I go.
 
-## The Bad Parts
+### The Bad Parts
 
 This isn't to say that this process was entirely without frustration. The
 errors from statik are often entirely opaque with not enough detail of what is

@@ -29,7 +29,7 @@ history of perfectionism:
 
 You're hurting yourself, put that aside for a bit and build smaller games.
 
-## Make Games
+### Make Games
 
 If you want to stick to RPGs: Build dynamic encounters that evoke the feeling
 you want in your setting. Write self contained adventures that explore the
@@ -43,7 +43,7 @@ with design space, try building a new game for a standard deck of playing cards.
 Experiment with challenges like the
 [10 Minute Design Challenge](http://10minutedesignchallenge.co.uk/).
 
-## Play Games
+### Play Games
 
 Another thing you should do is play a wider variety of games. If you only play
 D&D, try some of the other RPGs out there. If you've never played a table top
@@ -60,7 +60,7 @@ Try video games, too. Again, even things you don't like.
 The important thing is that just like a writer needs to read broadly, a game
 developer or designer should experience a wide variety of games.
 
-## Study
+### Study
 
 Lastly, study the theory around games. There's fabulous books out there to help
 you with this: things like _The Rules of Play_ or _A Theory of Fun_ (both in my

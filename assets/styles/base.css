@@ -73,6 +73,10 @@ pre {
     font-size: 1.5rem;
 }
 
+.body-content h3 {
+    font-size: 1.25rem;
+}
+
 .body-content p {
     margin-bottom: 1rem;
 }
