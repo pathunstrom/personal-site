@@ -62,6 +62,7 @@ pre {
 .body-content {
     width: 100%;
     grid-area: body;
+    padding: 1em;
 }
 
 .body-content h1 {
@@ -189,7 +190,7 @@ pre {
                              "nav      body"
                              "links    body"
                              ".        body";
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 30% 70%;
         grid-template-rows: min-content min-content min-content min-content auto;
         width: 100%;
     }
@@ -227,7 +228,7 @@ pre {
 @media screen and (min-width: 1025px) {
 
     body {
-        grid-template-columns: 1fr 4fr;
+        grid-template-columns: 20% 80%;
     }
 
     .article-list {

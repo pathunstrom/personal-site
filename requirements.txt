@@ -1,2 +1,3 @@
 psycopg2-binary
+tornado==6.0.3
 statik
