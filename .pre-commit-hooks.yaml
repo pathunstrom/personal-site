@@ -1,0 +1,5 @@
+- id: statik
+  name: statik
+  entry: statik
+  language: system
+  always_run: true
