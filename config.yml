@@ -1,5 +1,5 @@
 project-name: My personal homepage
-base-path: /
+base-path: /public/
 assets:
   source: assets
   dest: static
