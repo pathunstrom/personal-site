@@ -1,8 +1,11 @@
 # personal-site
 New home for my personal website.
 
-## Building
+## Development
+Currently using statik, the requirements file currently works on Python 3.7.
 
-To build locally invoke:
+To test locally:
 
-    statik -p dev-config.yml --clear-output
+    statik
+    python -m http.server -b 127.0.0.1 8080 -d public
+    python -m webbrowser http://localhost:8080
