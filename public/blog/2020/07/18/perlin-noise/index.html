@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Piper Thunstrom
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Styles. -->
+  <link href="/static/styles/reset.css" type="text/css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Comfortaa&family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <link href="/static/styles/base.css" type="text/css" rel="stylesheet">
+  
+  <link href="/static/styles/author.css" type="text/css" rel="stylesheet">
+  <link href="/static/styles/article.css" type="text/css" rel="stylesheet">
+
+  <link rel="icon" href="/static/img/avatars/piper.jpeg" type="image/x-icon" />
+</head>
+<body>
+  <div class="headshot">
+  <img class="full-img" src="/static/img/headshot.jpg" width=1242 height=1740 alt="A headshot of Piper Thunstrom">
+  <img class="sqr-img" src="/static/img/headshot-square.jpg" width=1242 height=1243 alt="A headshot of Piper Thunstrom">
+</div>
+  <header class="title">
+  <h1>Piper Thunstrom</h1>
+  
+</header>
+  <div class="body-content">
+    
+  
+    <article class="post" id="perlin-noise">
+  <header class="image-container"><img src="/static/img/headers/code.png" width=1200 height=627 alt="A computer screen with CSS"></header>
+  <section>
+    <h2>Biased Randomness</h2>
+    <div class="article-content">
+        <p>Last weekend, I joined in the GMTK Game Jam 2020. It was a milestone of sorts
+for me and for ppb. It's actually the first time I participated in a game jam
+<em>and actually submitted a game.</em> I participate a lot mostly on the "I'll do what
+I can" basis, and have never had a thing assembled enough to be happy to submit.
+For ppb, this represented the first known use of it in a game jam, and let me
+tell you: it went very well.</p>
+<p>You can check out my entry below:</p>
+<iframe src="https://itch.io/embed/694670" height="167" width="552" frameborder="0"><a href="https://pathunstrom.itch.io/smugglers-run">Smuggler&#039;s Run by Piper Thunstrom</a></iframe>
+
+<p>The theme of the jam was "Out of Control", and as a developer very focused on
+user experience, I knew I wanted the state of being out of control to be part
+of the challenge, but not to take away reasonable controls completely.</p>
+<p>Thus spawned the theme of shock mines that make your controls unreliable.</p>
+<p>That started as a raw chance to reverse your controls. The following code
+is basically what it looked like:</p>
+<pre><code>import random
+
+control = True
+fail_chance = .3
+
+roll = random.random
+if control and not roll &lt; fail_chance or not control and roll &lt; fail_chance:
+    activate_control(control)
+</code></pre>
+<p>This is nice and simple to build, but there's one problem:</p>
+<p>We roll every simulation frame.</p>
+<p>When you do that, one frame the roll will be under our fail_chance, and the next
+it might be higher. There's not enough change per frame for that to really feel
+like something failed to the end user. So I needed another solution.</p>
+<p>I considered, for a while, having a chance for it to fail, then a time tracker
+until it was good again, but that would be a lot of effort and debugging. So I
+continued to work on other bits of the game, but had this problem in mind.</p>
+<p>I then remembered that I've been doing research on
+<a href="https://www.youtube.com/watch?v=mr5xkf6zSzk">normalized transforms</a>
+(you might know them as tweens or easing functions) and I realized I could apply
+the same strategy of normalizing them to fake my random.random.</p>
+<p>With that idea in hand, I reached for Perlin noise. A quick summary for those
+new to Perlin noise: it's a form of gradient noise on an arbitrary number of
+axes. For our purposes, no matter how many dimensions you run it in, you get
+back a value in approximately the (-1: 1) range. You can
+<a href="https://eev.ee/blog/2016/05/29/perlin-noise/">read more here</a>.</p>
+<p>Okay, two tools in hand, how do we apply this?</p>
+<p>For each control the player has access to, I defined a separate 1 dimensional
+Perlin noise generator. It looks like this:</p>
+<pre><code>main_random = PerlinNoiseFactory(1)
+retro_random = PerlinNoiseFactory(1)
+left_random = PerlinNoiseFactory(1)
+right_random = PerlinNoiseFactory(1)
+rot_left_random = PerlinNoiseFactory(1)
+rot_right_random = PerlinNoiseFactory(1)
+</code></pre>
+<p>Now each of those variables is a function that takes a single input, and outputs
+a value between -1 and 1. It's not <em>quite</em> random.random, but we can work with
+this.</p>
+<p>Since each one of these items ended up being its own state, I made a dataclass
+to track them:</p>
+<pre><code>@dataclass
+class Component:
+    control_name: str
+    operable: bool = True
+    damage: int = 0
+    CONFIG_MAX_DAMAGE = 100
+    randomizer: Callable[[float], float] = lambda _: random()
+</code></pre>
+<p>So here you can see the previous version of the randomizer: Take a single input,
+output a value from 0 to 1. Again, this <em>works</em> it just doesn't feel quite as
+nice.</p>
+<p>So the final step to setting this up, is changing the component randomizer based
+on the individual controls:</p>
+<pre><code>components = {
+    "forward": Component(
+            "forward", 
+            damage=CONFIG_STARTING_DAMAGE, 
+            randomizer=lambda x: (main_random(x) + 1) / 2),
+    "backwards": Component("backwards", damage=CONFIG_STARTING_DAMAGE, randomizer=lambda x: (retro_random(x) + 1) / 2),
+    "left": Component("left", damage=CONFIG_STARTING_DAMAGE, randomizer=lambda x: (left_random(x) + 1) / 2),
+    "right": Component("right", damage=CONFIG_STARTING_DAMAGE, randomizer=lambda x: (right_random(x) + 1) / 2),
+    "rotate_left": Component("rotate_left", damage=CONFIG_STARTING_DAMAGE, randomizer=lambda x: (rot_left_random(x) + 1) / 2),
+    "rotate_right": Component("rotate_right", damage=CONFIG_STARTING_DAMAGE, randomizer=lambda x: (rot_right_random(x) + 1) / 2)
+}
+</code></pre>
+<p>Here's the initialization of the components. Note that the component name and
+the key are the same, and I'd probably find a nicer way to handle this in the
+future.</p>
+<p>The important piece, though, is the randomizer function:</p>
+<p>Our randomizer now takes one input, passes that to our <code>main_random</code> function
+(remember, it's between -1 and 1), then normalizes it by adding one and dividing
+by 2. So the output of this randomizer has the same range as our original one,
+but because it's perlin noise, it has some unique properties when applied over a
+continuous sequence. A continuous sequence like, say, time.</p>
+<pre><code>def control_active(self, component, controls, now):
+    _random = component.randomizer(now / 5)
+    malfunction = _random &lt; component.damage / component.CONFIG_MAX_DAMAGE
+    control_val = getattr(controls, component.control_name)
+    return (control_val and not malfunction) or (not control_val and malfunction)
+</code></pre>
+<p>Here it is, the actual implementation. I pass in the value from
+<code>time.perf_counter</code> for this frame, and I divide that by 5 (which stretches the
+gradient out) and compare that random value to the percentage chance of a
+malfunction, calculated here as the percentage damage the component happens to
+have.</p>
+<p>What this does is if the gradient of the Perlin noise goes low, it keeps going
+low for a period of time, and then rises again, based on the offsets of the
+underlying noise implementation. Instead of a bunch of state managing when and
+how things fail, we just let our noise function operate on time and give us that
+behavior for us. And by dividing or multiplying our input, we can adjust the
+intervals.</p>
+<p>So try out some biased randomness in your next project, it's surprisingly simple
+to replace the built in randomizers and you get very different flavor from
+something like a noise function versus than you would get from a uniform random
+function.</p>
+    </div>
+  </section>
+  <footer>
+    
+      <div class="author">
+  <img class="author__image" src="/static/img/avatars/piper.jpeg" alt="Avatar for Piper Thunstrom">
+  <p class="author__name">Piper Thunstrom</p>
+  <p class="author__bio">Piper is a pythonista, game enthusiast, and web developer. She's the author and maintainer of ppb and misbehave. She also edits books and gives talks.</p>
+</div>
+    
+  </footer>
+</article>
+  
+
+  </div>
+  <nav class="main-nav">
+  <ul>
+    <li><a href=/>Home</a></li>
+    <li><a href=/blog/>Blog</a></li>
+  </ul>
+</nav>
+
+  <ul class="link-tree">
+      
+          <li><a href="https://twitter.com/pathunstrom" class="icon-link">
+    <img src="/static/img/icons/twitter.png" alt="Twitter">
+</a></li>
+      
+          <li><a href="https://github.com/pathunstrom" class="icon-link">
+    <img src="/static/img/icons/github-white.png" alt="Github">
+</a></li>
+      
+          <li><a href="https://www.patreon.com/pathunstrom?fan_landing=true" class="icon-link">
+    <img src="/static/img/icons/patreon-white.png" alt="Patreon">
+</a></li>
+      
+  </ul>
+
+</body>
+</html>

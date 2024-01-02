@@ -1,0 +1,259 @@
+:root {
+    --background-color: hsla(282, 80%, 30%, 1);
+    --background-highlight: hsla(290, 80%, 35%, 1);
+    --text-background:  hsla(320, 100%, 90%, 1);
+    --text-color: rgba(255, 255, 255, 0.9);
+    --code-background: hsla(300, 25%, 85%, 1);
+    --left-column-width: 29%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--text-color);
+    background: #6a3093;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--background-color), var(--background-highlight));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--background-color), var(--background-highlight)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: grid;
+    grid-template-areas: "headshot header"
+                         "body body"
+                         "nav nav"
+                         "links links";
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 20vh auto;
+    grid-row-gap: .5em;
+    max-width: 100%;
+    padding: 1em;
+}
+
+a {
+    font-weight: bold;
+    color: var(--text-background)
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bree Serif', serif;
+    margin: 1.5rem 0 .75rem;
+    padding-left: .75rem;
+}
+
+code {
+    font-family: 'Source Code Pro', monospace;
+    color: black;
+    background-color: var(--code-background);
+    padding: 0 0.1em;
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+pre {
+    padding: 1em;
+    margin: 0.75em;
+    background-color: var(--code-background);
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.body-content {
+    width: 100%;
+    grid-area: body;
+    padding: 1em;
+    margin-top: 1rem;
+}
+
+.body-content h1 {
+    font-size: 1.5em;
+}
+
+.body-content h2 {
+    font-size: 1.5rem;
+}
+
+.body-content h3 {
+    font-size: 1.25rem;
+}
+
+.body-content p {
+    margin-bottom: 1rem;
+}
+
+.icon-link {
+    display: inline-block;
+}
+
+.icon-link > img {
+    height: 40px;
+    width: auto;
+    margin: 1.5em;
+}
+
+.link-tree {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    grid-area: links;
+}
+
+.link-tree > li {
+    display: inline;
+}
+
+.title {
+    display: flex;
+    grid-area: header;
+    padding: .5em;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+.title h1 {
+    grid-area: t;
+    font-size: 4.5vh;
+    margin: 0;
+    padding: 0;
+}
+
+.title .subtitle {
+    display: none;
+    grid-area: s;
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
+
+.headshot {
+    grid-area: headshot;
+    padding: .5em;
+    width: 100%;
+
+}
+
+.headshot img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    z-index: -5;
+}
+
+.headshot .full-img {
+    display: none;
+}
+
+.main-nav {
+    grid-area: nav;
+}
+.main-nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-nav li {
+    width: 6em;
+    height: 3em;
+    border: 1px solid var(--text-background);
+    border-radius: 5px;
+}
+
+.main-nav a {
+    display: inline-block;
+    text-decoration: None;
+    color: white;
+    font-weight: bold;
+    height: 100%;
+    width: 100%;
+    padding-top: .9em;
+    text-align: center;
+}
+
+@media screen and (min-width: 425px) {
+    .body-content h1 {
+        font-size: 2rem;
+    }
+
+    .title {
+        flex-direction: column;
+    }
+
+    .title .subtitle {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 520px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 725px) {
+    body {
+        grid-template-areas: "headshot header"
+                             "headshot body"
+                             "nav      body"
+                             "links    body"
+                             ".        body";
+        grid-template-columns: 30% 70%;
+        grid-template-rows: min-content min-content min-content min-content auto;
+        width: 100%;
+    }
+
+    .headshot img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .headshot .full-img {
+        display: block;
+    }
+
+    .headshot .sqr-img {
+        display: none;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    .main-nav li {
+        width: 90%;
+        margin: 0.5em 0;
+    }
+
+    .link-tree {
+        flex-flow: row;
+    }
+
+}
+
+@media screen and (min-width: 1025px) {
+
+    body {
+        grid-template-columns: 20% 80%;
+    }
+
+    .article-list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+    }
+
+    .article-list li {
+        flex-basis: 33%
+    }
+
+    .body-content h1 {
+        font-size: 3rem;
+    }
+
+    .body-content h2 {
+        font-size: 2.4rem;
+    }
+
+}
