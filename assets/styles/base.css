@@ -87,9 +87,8 @@ pre {
 }
 
 .icon-link > img {
-    height: 40px;
+    height: 50px;
     width: auto;
-    margin: 1.5em;
 }
 
 .link-tree {
@@ -97,6 +96,7 @@ pre {
     list-style: none;
     justify-content: space-around;
     grid-area: links;
+    flex-wrap: wrap;
 }
 
 .link-tree > li {
@@ -224,11 +224,6 @@ pre {
         width: 90%;
         margin: 0.5em 0;
     }
-
-    .link-tree {
-        flex-flow: row;
-    }
-
 }
 
 @media screen and (min-width: 1025px) {
