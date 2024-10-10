@@ -84,6 +84,14 @@ pre {
 
 .icon-link {
     display: inline-block;
+    border-radius: 5px;
+    padding: 0.25em;
+    transition: background-color ease-in 0.25s;
+}
+
+.icon-link:hover {
+    background-color: var(--background-highlight);
+    transition: background-color ease-in 0.25s;
 }
 
 .icon-link > img {
@@ -156,6 +164,12 @@ pre {
     height: 3em;
     border: 1px solid var(--text-background);
     border-radius: 5px;
+    transition: background-color ease-in 0.25s;
+}
+
+.main-nav li:hover {
+    background-color: var(--background-highlight);
+    transition: background-color ease-in 0.25s;
 }
 
 .main-nav a {

@@ -3,6 +3,13 @@ section.article-summary {
     border-top: 2px solid var(--text-background);
     padding: 1em;
     margin-top: 1.5em;
+    transition: background-color ease-in 0.25s;
+    border-radius: 5px;
+}
+
+section.article-summary:hover {
+    background-color: var(--background-highlight);
+    transition: background-color ease-in 0.25s;
 }
 
 a.article-summary {
