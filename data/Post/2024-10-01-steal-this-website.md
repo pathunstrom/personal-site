@@ -1,8 +1,8 @@
 ---
-title: "Announcing: Steal This Website."
+title: "Announcing: Steal This Website"
 slug: announce-steal-this-website
 header: web-dev
-summary: This is a debug first post. Completely useless.
+summary: Presenting a tiny art project and education tool for the indie web.
 author: piper
 published: 2024-10-11
 ---

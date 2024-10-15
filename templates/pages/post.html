@@ -1,5 +1,13 @@
 {% extends "base.html" %}
 
+{% block title %}
+{{ post.title }} on {{ site_title }}'s Blog
+{% endblock %}
+
+{% block description %}
+  {{ post.summary }}
+{% endblock %}
+
 {% block additional_styles %}
   <link href="{% asset "styles/author.css" %}" type="text/css" rel="stylesheet">
   <link href="{% asset "styles/article.css" %}" type="text/css" rel="stylesheet">
