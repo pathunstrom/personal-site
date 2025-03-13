@@ -27,6 +27,12 @@
     list-style: disc;
 }
 
+.post p img {
+    max-width: 90%;
+    height: auto;
+    margin: 1em 5%;
+}
+
 @media screen and (min-width: 425px) {
     .post header img {
         max-width: 80%;
