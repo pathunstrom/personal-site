@@ -67,7 +67,7 @@ This is very much the opposite end of the spectrum from meta, though they provid
 ### What Can Be Included
 
 So a press kit can be multiple things and is often thought of as a Public Relations artifact.
-Once upon a time they were brochure style, but a web page is a much better fit for this nowaday.
+Once upon a time they were brochure style, but a web page is a much better fit for this nowadays.
 
 So what kinds of things _could_ you think about?
 
