@@ -2,7 +2,7 @@
 title: "Project: Dykes"
 slug: project-dykes
 header: laser-hall
-summary: A resource for conference organizers deciding on what to include in your media kit.
+summary: "Announcing Dykes: A simple argument parsing library."
 author: piper
 published: 2025-06-16
 ---
